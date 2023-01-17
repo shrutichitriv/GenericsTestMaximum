@@ -28,6 +28,13 @@ namespace GenericsTest
             var max = MaxValue(values);
             return max;
         }
+        public void ToPrint()
+        {
+            var maximum = MaxValue(this.values);
+            Console.WriteLine($"The Maximum value is {maximum}");
+
+
+        }
 
     }
 }

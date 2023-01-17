@@ -4,17 +4,20 @@
     {
         static void Main(string[] args)
         {
-            int[] ints = { 112, 344, 432, 555, 678 };
-            int intResGen = new FindMaximum<int>(ints).GetMax();
-            Console.WriteLine("Maximum Interger Value is :" + intResGen);
+            int[] ints = { 112, 3444, 432, 555, 678 };
+            double[] doubles = { 11.2, 34.4, 4444.32, 55.5, 6.78 };
+            string[] strings = { "111", "222", "9999", "55", "999" };
 
-            double[] doubles = { 11.2, 34.4, 4.32, 55.5, 6.78 };
-            double doubleResGen = new FindMaximum<double>(doubles).GetMax();
-            Console.WriteLine("Maximum Double Value is :" + doubleResGen);
+            FindMaximum<int> intResGen = new FindMaximum<int>(ints);
+            intResGen.ToPrint();
 
-            string[] strings = { "111", "222", "333", "55", "999" };
-            string stringResGen = new FindMaximum<string>(strings).GetMax();
-            Console.WriteLine("Maximum String Value is :" + stringResGen);
+            FindMaximum<double> doubleResGen = new FindMaximum<double>(doubles);
+            doubleResGen.ToPrint();
+
+            FindMaximum<string> stringResGen = new FindMaximum<string>(strings);
+            stringResGen.ToPrint();
+
+
 
         }
     }

@@ -12,6 +12,9 @@
             double doubleResult = FindMaximum.GetMaximumFloatNumber(11.5, 11.6, 11.7);
             Console.WriteLine($"The maxumum number between three integer is : {doubleResult}");
 
+            string stringResult = FindMaximum.GetMaximumString("12", "11.6", "11.7");
+            Console.WriteLine($"The maxumum number between three integer is : {stringResult}");
+
         }
     }
 }

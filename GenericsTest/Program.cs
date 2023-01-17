@@ -4,14 +4,14 @@
     {
         static void Main(string[] args)
         {
-            FindMaximum maxValue = new FindMaximum();
-
-            int intResGen = maxValue.GetMaximun<int>(10, 78, 90);
+            int intResGen = new FindMaximum<int>(20, 50, 9).GetMaximun();
             Console.WriteLine("Maximum Interger Value is :" + intResGen);
-            double doubleResGen = maxValue.GetMaximun<double>(11.4, 89.67, 98.5);
+            double doubleResGen = new FindMaximum<double>(200.0, 50.9, 9.5).GetMaximun();
             Console.WriteLine("Maximum Double Value is :" + doubleResGen);
-            string stringResGen = maxValue.GetMaximun<string>("456", "946", "657");
-            Console.WriteLine("Maximum String is :" + stringResGen);
+            string stringResGen = new FindMaximum<string>("44", "56", "78").GetMaximun();
+            Console.WriteLine("Maximum String Value is :" + stringResGen);
+
+
         }
     }
 }

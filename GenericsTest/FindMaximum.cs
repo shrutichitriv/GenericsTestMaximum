@@ -6,18 +6,9 @@ using System.Threading.Tasks;
 
 namespace GenericsTest
 {
-    internal class FindMaximum<T> where T : IComparable
+    internal class FindMaximum
     {
-        private T firstValue;
-        private T secondValue;
-        private T thirdValue;
-        public FindMaximum(T firstValue, T secondValue, T thirdValue)
-        {
-            this.firstValue = firstValue;
-            this.secondValue = secondValue;
-            this.thirdValue = thirdValue;
-        }
-        public T GetMaximun()
+        public static int GetMaximumIntNumber(int firstValue, int secondValue, int thirdValue)
         {
             if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0 ||
                firstValue.CompareTo(secondValue) >= 0 && firstValue.CompareTo(thirdValue) > 0 ||
@@ -37,8 +28,7 @@ namespace GenericsTest
             {
                 return thirdValue;
             }
-            throw new Exception("All three value are same");
+            return firstValue;
         }
-
     }
 }
